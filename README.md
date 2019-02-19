@@ -8,6 +8,6 @@ Work:
 
 It does not work:
 ```
-# docker stack deploy -c docker-compose.yml test
-# docker service logs -f test_cleaner
+# docker stack deploy -c docker-compose.yml test1
+# docker service logs -f test1_cleaner
 ```
