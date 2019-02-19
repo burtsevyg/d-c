@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+  cleaner:
+    image: d-c
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "/usr/bin/docker:/usr/bin/docker"
+    deploy:
+      mode: global
