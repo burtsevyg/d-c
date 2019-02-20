@@ -13,7 +13,7 @@ RUN chmod +x /script.sh
 RUN chmod 0644 /etc/cron.d/clean-cron
 
 # Create the log file to be able to run tail
-RUN touch /var/log/cron.log
+RUN mkfifo --mode 0666 /var/log/cron.log
 
 # Run the command on container startup
-CMD cron && tail -f /var/log/cron.log
+CMD ["/bin/bash", "-c", "cron && tail -f /var/log/cron.log"]
